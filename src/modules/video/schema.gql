@@ -1,0 +1,39 @@
+type Query {
+    videos(
+        pagination: Pagination = {}
+        search: String
+    ): [Video!]!
+    userVideos(
+        token: String!
+    ): [Video]!
+}
+
+type Mutation {
+    updateVideo(
+        token: String!
+        videoId: ID!
+        newTitle: String!
+    ): VideoResponse!
+
+
+    deleteVideo(
+        token: String!
+        videoId: ID!
+    ): VideoResponse!
+
+
+    uploadVideo(
+        userId: ID!
+        video: Upload!
+        videoTitle: String!
+    ): VideoResponse!
+    
+}
+
+scalar Any
+type Video {
+    userId: ID!,
+    videoId: ID!,
+    videoName: String!,
+    videoCreatedAt: Any
+}

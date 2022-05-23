@@ -1,0 +1,16 @@
+login 
+register
+
+ROUTES
+    register
+    login
+    tokenChecker
+
+    open Routes
+        (videos)
+        (users)
+    private Routes
+        (privateVideos)  token userId 
+        (changeVideoName) status 2
+        (deleteVideo) status 1
+        uploadVideo

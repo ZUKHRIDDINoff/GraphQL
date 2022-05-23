@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.13",
+    "apollo-server-express": "^3.7.0",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0",
+    "graphql-upload": "^13.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "sha256": "^0.2.0"
+  },
+  "imports": {
+    "#pg": "./src/config/db.js",
+    "#config/*": "./src/config/*.js",
+    "#helpers/*": "./src/helpers/*.js"
+  },
+  "name": "21-may",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon *e src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
